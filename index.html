@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BinvestA - Invest in BAI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Invest in BAI</h1>
+
+    <!-- Conectar con Metamask -->
+    <button id="connectButton" onclick="connectMetamask()">Connect MetaMask</button>
+
+    <!-- Instrucciones -->
+    <div>
+        <h3>How to Buy BAI</h3>
+        <ol>
+            <li>Connect your wallet with Metamask</li>
+            <li>Enter the amount of ETH you want to invest</li>
+            <li>Click on “Invest in BAI” to confirm the purchase</li>
+            <li>Your BAI will be transferred to your wallet immediately</li>
+        </ol>
+    </div>
+
+    <!-- Formulario para comprar -->
+    <input type="number" id="ethAmount" placeholder="Amount in ETH">
+    <button id="investButton" onclick="buyBAI()">Invest in BAI</button>
+
+    <!-- Supply y barra de progreso -->
+    <div id="circulatingSupply">Circulating Supply: 0</div>
+    <div id="burnBarContainer" style="width: 100%; background-color: lightgray;">
+        <div id="burnBar" style="height: 20px; width: 0%; background-color: green;"></div>
+    </div>
+
+    <!-- Contador de quema -->
+    <div id="burnCountdown">Burn Event in: 365 Days</div>
+
+    <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
